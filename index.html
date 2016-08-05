@@ -48,9 +48,15 @@ Note: You'll need the bootstrap css and js files and change the paths to them be
       });
       
       
-      $.get('/keystone/api/user', '', function(data) {debugger});
+      $.get('/keystone/api/users', '', function(data) {debugger});
       
-      
+      $.get('/keystone/api/users/57a40e856f7e9dff36414c7f', '', function(data) {
+        //debugger;
+        console.log('After $.get(/keystone/api/users/57a40e856f7e9dff36414c7f), server returned...');
+        console.log(data);
+      }).fail( function() {
+        console.error('$.get(/keystone/api/users/57a40e856f7e9dff36414c7f failed.)') ;
+      });
       
     });
     
