@@ -40,11 +40,13 @@ Note: You'll need the bootstrap css and js files and change the paths to them be
     
       //Get user session information
       $.get('/keystone/api/session', '', function(data) {
-        debugger;
+        //debugger;
+        console.log('After $.get(/keystone/api/session), server returned...');
+        console.log(data);
       });
       
       
-      
+      //$.get('/keystone/api/session', '', function(data) {
       
       
       
