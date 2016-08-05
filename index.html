@@ -38,10 +38,16 @@ Note: You'll need the bootstrap css and js files and change the paths to them be
     //First function that is called when the document finishes loading.
     $(document).ready( function() {
     
-      //Call server to retrieve JSON Gallery data.
-      $.get('/api/session', '', function(data) {
+      //Get user session information
+      $.get('/keystone/api/session', '', function(data) {
         debugger;
       });
+      
+      
+      
+      
+      
+      
     });
     
   </script>
