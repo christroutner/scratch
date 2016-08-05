@@ -43,10 +43,12 @@ Note: You'll need the bootstrap css and js files and change the paths to them be
         //debugger;
         console.log('After $.get(/keystone/api/session), server returned...');
         console.log(data);
+      }).fail( function() {
+        console.error('$.get(/keystone/api/session failed.)') ;
       });
       
       
-      //$.get('/keystone/api/session', '', function(data) {
+      $.get('/keystone/api/user', '', function(data) {debugger});
       
       
       
