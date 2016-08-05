@@ -47,6 +47,7 @@ Note: You'll need the bootstrap css and js files and change the paths to them be
         console.error('$.get(/keystone/api/session failed.)') ;
       });
       
+      $.get('/keystone/api/user', '', function(data) {debugger});
       
       $.get('/keystone/api/users', '', function(data) {debugger});
       
