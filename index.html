@@ -33,25 +33,16 @@ Note: You'll need the bootstrap css and js files and change the paths to them be
   <script type="text/javascript">
     //Global Variables
     var serverIP = '<your ip address>';
+    var serverIP = '192.241.215.68';
     
     //First function that is called when the document finishes loading.
     $(document).ready( function() {
     
       //Call server to retrieve JSON Gallery data.
-      $.getJSON('http://'+serverIP+':3000/api/frontendwidget/list', '', processJSON);
+      $.get('http://'+serverIP+':3000/api/session', '', function(data) {
+        debugger;
+      });
     });
-    
-    //Callback function executed when JSON data is returned.
-    //Sorts the items in data.collections into different categories.
-    function processJSON(data) {
-      //Fill in the images with data from the KeystoneJS API
-      $('#image1').attr('src', data.collections[0].url1);
-      $('#image1').attr('alt', data.collections[0].alt1);
-      $('#image2').attr('src', data.collections[1].url1);
-      $('#image2').attr('alt', data.collections[1].alt1);
-      $('#image3').attr('src', data.collections[2].url1);
-      $('#image3').attr('alt', data.collections[2].alt1);
-    }
     
   </script>
   
